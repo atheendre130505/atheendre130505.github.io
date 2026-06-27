@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atheendre 'Ram' Ramesh — builder moving into business. Seeking founder's office, product, strategy & ops, VC, and consulting roles. Bangalore, open to remote." />
+  <title>Atheendre "Ram" Ramesh</title>
+
+  <!-- Fonts: Inter (body) + Fraunces (display headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       RESET & CUSTOM PROPERTIES
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent:       #1d5c3f;
+      --accent-dark:  #154d34;
+      --accent-light: #e8f2ec;
+      --text:         #111827;
+      --body:         #374151;
+      --muted:        #6b7280;
+      --border:       #e5e7eb;
+      --bg:           #fafaf9;
+      --surface:      #ffffff;
+      --max-w:        760px;
+      --serif:        'Fraunces', Georgia, serif;
+      --sans:         'Inter', system-ui, -apple-system, sans-serif;
+      --radius:       10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family:             var(--sans);
+      background-color:        var(--bg);
+      color:                   var(--text);
+      line-height:             1.6;
+      font-size:               1rem;
+      -webkit-font-smoothing:  antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin:    0 auto;
+      padding:   0 1.5rem;
+    }
+
+    section {
+      padding:       4rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    .section-label {
+      font-size:      0.72rem;
+      font-weight:    600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color:          var(--accent);
+      margin-bottom:  1.25rem;
+    }
+
+    h1 {
+      font-family:    var(--serif);
+      font-size:      clamp(2.4rem, 5.5vw, 3.6rem);
+      font-weight:    600;
+      line-height:    1.12;
+      letter-spacing: -0.025em;
+    }
+
+    h2 {
+      font-family:    var(--serif);
+      font-size:      clamp(1.5rem, 3vw, 2rem);
+      font-weight:    600;
+      line-height:    1.2;
+      letter-spacing: -0.015em;
+      margin-bottom:  1.5rem;
+    }
+
+    h3 {
+      font-size:     1.025rem;
+      font-weight:   600;
+      margin-bottom: 0.35rem;
+      line-height:   1.35;
+    }
+
+    p { color: var(--body); line-height: 1.7; }
+
+    a {
+      color:      var(--accent);
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    a:hover { opacity: 0.7; }
+
+    /* ============================================================
+       [TODO] MARKER — amber pill for anything still unfilled
+    ============================================================ */
+    .todo {
+      display:        inline;
+      background:     #fef3c7;
+      color:          #92400e;
+      font-size:      0.72rem;
+      font-weight:    600;
+      font-family:    monospace;
+      letter-spacing: 0.02em;
+      padding:        0.12rem 0.4rem;
+      border-radius:  3px;
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position:              sticky;
+      top:                   0;
+      z-index:               100;
+      background:            rgba(250, 250, 249, 0.88);
+      backdrop-filter:       blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom:         1px solid var(--border);
+      padding:               0.85rem 0;
+    }
+
+    nav .container {
+      display:         flex;
+      justify-content: space-between;
+      align-items:     center;
+    }
+
+    .nav-name {
+      font-weight:    600;
+      font-size:      0.875rem;
+      letter-spacing: -0.01em;
+      color:          var(--text);
+    }
+
+    .nav-links {
+      display:    flex;
+      gap:        1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size:   0.82rem;
+      font-weight: 500;
+      color:       var(--muted);
+      transition:  color 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); opacity: 1; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      padding:       5.5rem 0 5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-eyebrow {
+      display:       flex;
+      align-items:   center;
+      gap:           0.6rem;
+      font-size:     0.85rem;
+      color:         var(--muted);
+      margin-bottom: 1.4rem;
+    }
+    .hero-eyebrow::before {
+      content:       '';
+      display:       block;
+      width:         1.6rem;
+      height:        2px;
+      background:    var(--accent);
+      border-radius: 2px;
+      flex-shrink:   0;
+    }
+
+    .hero-name { margin-bottom: 1.1rem; }
+
+    .hero-positioning {
+      font-size:     clamp(1.05rem, 2.4vw, 1.275rem);
+      color:         var(--body);
+      max-width:     540px;
+      line-height:   1.55;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-positioning strong {
+      color:       var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-meta {
+      font-size:     0.875rem;
+      color:         var(--muted);
+      margin-bottom: 2.25rem;
+      display:       flex;
+      gap:           0.6rem;
+      flex-wrap:     wrap;
+      align-items:   center;
+    }
+    .hero-meta-dot { color: var(--border); user-select: none; }
+
+    .cta-row {
+      display:   flex;
+      gap:       0.85rem;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn-primary {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             0.45rem;
+      background:      var(--accent);
+      color:           #fff !important;
+      padding:         0.7rem 1.5rem;
+      border-radius:   6px;
+      font-size:       0.9rem;
+      font-weight:     600;
+      transition:      background 0.15s, transform 0.12s;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      opacity:    1;
+      transform:  translateY(-1px);
+    }
+
+    .btn-outline {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             0.45rem;
+      border:          1.5px solid var(--border);
+      color:           var(--text) !important;
+      padding:         0.68rem 1.3rem;
+      border-radius:   6px;
+      font-size:       0.9rem;
+      font-weight:     500;
+      transition:      border-color 0.15s, color 0.15s, transform 0.12s;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color:        var(--accent) !important;
+      opacity:      1;
+      transform:    translateY(-1px);
+    }
+
+    /* ============================================================
+       WHAT I'M LOOKING FOR
+    ============================================================ */
+    #looking-for p {
+      font-size:   1.1rem;
+      max-width:   580px;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       LEADERSHIP
+    ============================================================ */
+    .leadership-card {
+      background:    var(--surface);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       2rem 2rem 2rem 2.35rem;
+      position:      relative;
+      overflow:      hidden;
+    }
+    .leadership-card::before {
+      content:       '';
+      position:      absolute;
+      left: 0; top: 0; bottom: 0;
+      width:         4px;
+      background:    var(--accent);
+      border-radius: 4px 0 0 4px;
+    }
+
+    .leadership-role {
+      font-size:     1.1rem;
+      font-weight:   600;
+      margin-bottom: 0.2rem;
+    }
+    .leadership-org {
+      font-size:     0.9rem;
+      font-weight:   500;
+      color:         var(--accent);
+      margin-bottom: 1rem;
+    }
+    .leadership-desc { color: var(--body); line-height: 1.7; }
+
+    /* ============================================================
+       SELECTED WORK
+    ============================================================ */
+    .projects-grid { display: grid; gap: 1.2rem; }
+
+    .project-card {
+      background:    var(--surface);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       1.6rem;
+      transition:    border-color 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      box-shadow:   0 4px 18px rgba(29, 92, 63, 0.07);
+    }
+
+    .project-label {
+      font-size:      0.7rem;
+      font-weight:    600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color:          var(--muted);
+      margin-bottom:  0.4rem;
+    }
+
+    .project-body {
+      font-size:     0.95rem;
+      color:         var(--body);
+      line-height:   1.7;
+      margin-bottom: 0.9rem;
+    }
+
+    .project-outcome {
+      font-size:     0.9rem;
+      font-weight:   600;
+      color:         var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+    .tag {
+      font-size:     0.7rem;
+      font-weight:   500;
+      background:    var(--accent-light);
+      color:         var(--accent);
+      padding:       0.2rem 0.55rem;
+      border-radius: 4px;
+      white-space:   nowrap;
+    }
+
+    /* ============================================================
+       PROOF OF EXECUTION
+    ============================================================ */
+    .proof-intro {
+      font-size:     1.025rem;
+      color:         var(--body);
+      line-height:   1.75;
+      max-width:     580px;
+      margin-bottom: 1.75rem;
+    }
+
+    .contributions { display: grid; gap: 0.9rem; }
+
+    .contribution-item {
+      display:       flex;
+      align-items:   flex-start;
+      gap:           1rem;
+      background:    var(--surface);
+      border:        1px solid var(--border);
+      border-radius: var(--radius);
+      padding:       1.2rem 1.4rem;
+      transition:    border-color 0.2s, box-shadow 0.2s;
+    }
+    .contribution-item:hover {
+      border-color: var(--accent);
+      box-shadow:   0 3px 14px rgba(29, 92, 63, 0.07);
+    }
+
+    .contribution-icon {
+      width:           38px;
+      height:          38px;
+      border-radius:   7px;
+      background:      var(--accent-light);
+      display:         flex;
+      align-items:     center;
+      justify-content: center;
+      font-size:       1.1rem;
+      flex-shrink:     0;
+      margin-top:      1px;
+    }
+
+    .contribution-body { flex: 1; min-width: 0; }
+
+    .contribution-project {
+      font-weight:   600;
+      font-size:     0.975rem;
+      margin-bottom: 0.2rem;
+      color:         var(--text);
+    }
+
+    .contribution-desc {
+      font-size:     0.875rem;
+      color:         var(--muted);
+      line-height:   1.55;
+      margin-bottom: 0.55rem;
+    }
+
+    .contribution-link {
+      font-size:             0.82rem;
+      font-weight:           600;
+      color:                 var(--accent);
+      text-decoration:       underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about-text { max-width: 580px; }
+    .about-text p + p { margin-top: 1.1rem; }
+
+    /* ============================================================
+       EDUCATION
+    ============================================================ */
+    .edu-card {
+      background:      var(--surface);
+      border:          1px solid var(--border);
+      border-radius:   var(--radius);
+      padding:         1.6rem;
+      display:         flex;
+      justify-content: space-between;
+      align-items:     flex-start;
+      gap:             1rem;
+      flex-wrap:       wrap;
+    }
+
+    .edu-degree {
+      font-weight:   600;
+      font-size:     1rem;
+      margin-bottom: 0.2rem;
+    }
+    .edu-institution {
+      font-size:     0.875rem;
+      color:         var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .score-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    .score-chip {
+      background:    var(--accent-light);
+      color:         var(--accent);
+      font-size:     0.78rem;
+      font-weight:   600;
+      padding:       0.22rem 0.65rem;
+      border-radius: 20px;
+    }
+
+    .edu-year {
+      font-size:   0.85rem;
+      font-weight: 500;
+      color:       var(--muted);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+    }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    .contact-sub {
+      font-size:     1rem;
+      color:         var(--muted);
+      margin-bottom: 2.25rem;
+      margin-top:    -0.75rem;
+    }
+
+    .contact-links {
+      display:   flex;
+      gap:       0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             0.45rem;
+      font-size:       0.88rem;
+      font-weight:     500;
+      color:           var(--text) !important;
+      border:          1.5px solid var(--border);
+      padding:         0.6rem 1.05rem;
+      border-radius:   6px;
+      transition:      border-color 0.15s, color 0.15s, transform 0.12s;
+      text-decoration: none;
+    }
+    .contact-link:hover {
+      border-color: var(--accent);
+      color:        var(--accent) !important;
+      opacity:      1;
+      transform:    translateY(-1px);
+    }
+    .contact-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer { padding: 2.25rem 0; text-align: center; }
+    footer p { font-size: 0.8rem; color: var(--muted); }
+
+    /* ============================================================
+       SCROLL-REVEAL
+    ============================================================ */
+    .reveal {
+      opacity:    0;
+      transform:  translateY(16px);
+      transition: opacity 0.48s ease, transform 0.48s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 580px) {
+      section    { padding: 3rem 0; }
+      #hero      { padding: 3.5rem 0 3rem; }
+      .nav-links { display: none; }
+      .edu-card  { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================
+       NAV
+  ===================================================== -->
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <span class="nav-name">Ram Ramesh</span>
+      <ul class="nav-links">
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+  <section id="hero">
+    <div class="container">
+
+      <p class="hero-eyebrow">Bangalore, India — open to remote or Bangalore</p>
+
+      <h1 class="hero-name">
+        Atheendre<br />"Ram" Ramesh
+      </h1>
+
+      <p class="hero-positioning">
+        I <strong>build real software</strong> and I want to operate, decide, and lead.
+        My edge is technical depth in the service of business judgment.
+      </p>
+
+      <div class="hero-meta">
+        <span>CS undergraduate, RV University</span>
+        <span class="hero-meta-dot" aria-hidden="true">·</span>
+        <span>Open-source contributor</span>
+        <span class="hero-meta-dot" aria-hidden="true">·</span>
+        <span>People lead</span>
+      </div>
+
+      <div class="cta-row">
+        <a href="mailto:atheendreramesh@gmail.com" class="btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          Get in touch
+        </a>
+        <a href="#work" class="btn-outline">See my work</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       WHAT I'M LOOKING FOR
+  ===================================================== -->
+  <section id="looking-for">
+    <div class="container">
+      <p class="section-label">What I'm looking for</p>
+      <p>
+        Founder's office, product, strategy &amp; operations, VC analyst, and consulting roles —
+        internship or early-career, remote or Bangalore.
+        I want to work somewhere ambiguity is the norm, judgment matters, and I can own real outcomes from day one.
+      </p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       LEADERSHIP
+  ===================================================== -->
+  <section id="leadership">
+    <div class="container">
+      <p class="section-label">Leadership</p>
+      <h2>I've run a function, not just contributed to one.</h2>
+
+      <div class="leadership-card reveal">
+        <p class="leadership-role">Head of Volunteer Management</p>
+        <p class="leadership-org">Robin Hood Army · Bangalore</p>
+        <p class="leadership-desc">
+          Leads volunteer operations for Robin Hood Army's Bangalore chapter — owning recruitment,
+          onboarding, coordination, and retention of the volunteer base end-to-end.
+          Responsible for deploying volunteers reliably across food redistribution drives
+          and for building the systems that make a large, distributed team actually show up and deliver.
+          <!-- TODO: add team size and a specific outcome metric when you have the numbers -->
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       SELECTED WORK
+  ===================================================== -->
+  <section id="work">
+    <div class="container">
+      <p class="section-label">Selected work</p>
+      <h2>Problems I've owned end-to-end.</h2>
+
+      <div class="projects-grid">
+
+        <!-- ── STRIPE-FLOW ─────────────────────────────── -->
+        <article class="project-card reveal">
+          <p class="project-label">The problem</p>
+          <h3>StripeFlow — Enterprise Payment Platform</h3>
+          <p class="project-body">
+            Enterprise teams need payment infrastructure that doesn't fail at scale — most
+            hobby implementations collapse under load, lack observability, or can't handle
+            subscriptions alongside one-off charges. I designed and shipped a full-stack
+            payment platform from scratch: REST API backend, real-time webhook delivery with
+            retry logic, recurring billing, multi-currency support, and a live analytics dashboard.
+          </p>
+          <p class="project-outcome">
+            → 1,500+ transactions/sec at peak · 45 ms avg response · 99.9% uptime · 95%+ test coverage
+          </p>
+          <div class="tag-row">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">React</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+        </article>
+
+        <!-- ── AI LOAN ELIGIBILITY ENGINE ──────────────── -->
+        <article class="project-card reveal">
+          <p class="project-label">The problem</p>
+          <h3>AI Loan Eligibility Engine</h3>
+          <p class="project-body">
+            Matching loan applicants to eligible products required manual analyst time —
+            unscalable as applicant volume grew. I built a fully serverless AWS pipeline
+            that ingests bulk applicant data via S3, scrapes available loan products,
+            runs AI-assisted matching logic across multiple workflows, and delivers
+            personalised eligibility notifications — without a human in the loop.
+          </p>
+          <p class="project-outcome">
+            → End-to-end automation from CSV upload to personalised email — zero manual steps per applicant
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">n8n</span>
+          </div>
+        </article>
+
+        <!-- ── KAGGLE PERSONALITY CLASSIFIER ───────────── -->
+        <article class="project-card reveal">
+          <p class="project-label">The problem</p>
+          <h3>Personality Classifier — Kaggle Competition</h3>
+          <p class="project-body">
+            Top competitors were clustering at 96–97% accuracy; the ceiling was statistical
+            noise, not capability. I built a systematic multi-model ensemble — XGBoost,
+            AutoGluon, CatBoost, SVMs, and neural nets — then analysed where models diverged
+            to find the performance edge rather than just stacking outputs blindly.
+          </p>
+          <p class="project-outcome">
+            → 97.5% accuracy — top of leaderboard in a dense competitive field
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">AutoGluon</span>
+            <span class="tag">CatBoost</span>
+          </div>
+        </article>
+
+        <!-- ── DUELING DOUBLE DQN ──────────────────────── -->
+        <article class="project-card reveal">
+          <p class="project-label">The problem</p>
+          <h3>RL Agent — Chrome Dino (Dueling Double DQN)</h3>
+          <p class="project-body">
+            Training an agent from raw pixels is unstable — naive DQN diverges or learns
+            brittle policies. I implemented Dueling Double DQN with Prioritised Experience
+            Replay in PyTorch: separating value and advantage estimation, and focusing
+            training on high-impact transitions rather than uniform sampling.
+          </p>
+          <p class="project-outcome">
+            → Agent learns a stable jump policy from visual input alone; ships with pre-trained weights
+          </p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       PROOF OF EXECUTION
+  ===================================================== -->
+  <section id="proof">
+    <div class="container">
+      <p class="section-label">Proof of execution</p>
+      <p class="proof-intro">
+        I ship code that widely-used projects have accepted into production.
+        These aren't side-project demos — they're merged contributions to codebases
+        maintained by hundreds of engineers and used in production by millions.
+      </p>
+
+      <div class="contributions">
+
+        <div class="contribution-item reveal">
+          <div class="contribution-icon" aria-hidden="true">⚙</div>
+          <div class="contribution-body">
+            <p class="contribution-project">scikit-learn — merged PR #33197</p>
+            <p class="contribution-desc">
+              Identified and removed a duplicate test execution in the estimator checks pipeline —
+              a redundancy accidentally introduced in a prior PR that was causing wasteful CI runs
+              for every linear classifier. Small diff, real impact on developer velocity.
+            </p>
+            <a class="contribution-link"
+               href="https://github.com/scikit-learn/scikit-learn/pull/33197"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="View merged PR #33197 on scikit-learn (opens in new tab)">
+              View merged PR →
+            </a>
+          </div>
+        </div>
+
+        <div class="contribution-item reveal">
+          <div class="contribution-icon" aria-hidden="true">⚡</div>
+          <div class="contribution-body">
+            <p class="contribution-project">Apache DataFusion — merged PR #18427</p>
+            <p class="contribution-desc">
+              Fixed an intermittent benchmark failure in the map_query_sql suite caused by the
+              birthday paradox — random key generation was producing duplicates that broke the
+              benchmark's uniqueness invariant. Implemented a HashSet-backed generation loop
+              to guarantee uniqueness regardless of sample size.
+            </p>
+            <a class="contribution-link"
+               href="https://github.com/apache/datafusion/pull/18427"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="View merged PR #18427 on Apache DataFusion (opens in new tab)">
+              View merged PR →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       ABOUT
+  ===================================================== -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">About</p>
+      <h2>The trajectory.</h2>
+
+      <div class="about-text">
+        <p>
+          I started building software because I wanted to make things that actually work.
+          Along the way I realised the most interesting problems aren't purely technical —
+          they're about judgment, coordination, and deciding what to build in the first place.
+        </p>
+        <p>
+          That's the move I'm making deliberately. I have enough engineering depth to know
+          when a technical decision is really a product or strategy decision, and to earn
+          credibility with builders. Now I want to be in the rooms where the bigger calls get made —
+          with founders, operators, and investors shaping what comes next.
+        </p>
+        <p>
+          I'm based in Bangalore, graduating in 2027, and genuinely energised by hard problems
+          in fast-moving environments. If you're building something that matters, let's talk.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       EDUCATION & SCORES
+  ===================================================== -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label">Education</p>
+
+      <div class="edu-card reveal">
+        <div>
+          <p class="edu-degree">BSc (Hons) Computer Science</p>
+          <p class="edu-institution">RV University, Bangalore</p>
+          <div class="score-row">
+            <span class="score-chip">CGPA&nbsp;8.3</span>
+            <span class="score-chip">IELTS&nbsp;8.0</span>
+          </div>
+        </div>
+        <p class="edu-year">Graduating 2027</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================
+       CONTACT
+  ===================================================== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Contact</p>
+      <h2>Let's talk.</h2>
+      <p class="contact-sub">Fastest reply by email. Back to you within 24 hours.</p>
+
+      <div class="contact-links">
+
+        <a href="mailto:atheendreramesh@gmail.com" class="contact-link" aria-label="Send email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          atheendreramesh@gmail.com
+        </a>
+
+        <!-- TODO: paste your LinkedIn URL here (couldn't find it automatically) -->
+        <a href="https://linkedin.com/in/atheendre-ramesh"
+           target="_blank" rel="noopener noreferrer"
+           class="contact-link"
+           aria-label="LinkedIn profile (opens in new tab)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          linkedin.com/in/atheendre-ramesh
+        </a>
+
+        <a href="https://github.com/atheendre130505"
+           target="_blank" rel="noopener noreferrer"
+           class="contact-link"
+           aria-label="GitHub profile (opens in new tab)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          github.com/atheendre130505
+        </a>
+
+        <a href="./resume.html"
+           target="_blank"
+           class="btn-primary"
+           aria-label="View résumé (opens in new tab — print to PDF from there)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          View résumé
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+  <footer>
+    <div class="container">
+      <p>Atheendre "Ram" Ramesh · Bangalore, India</p>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       SCROLL-REVEAL
+  ===================================================== -->
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -36px 0px' }
+      );
+
+      document.querySelectorAll('.reveal').forEach(function (el, i) {
+        el.style.transitionDelay = (i % 4) * 0.07 + 's';
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
