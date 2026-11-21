@@ -179,9 +179,10 @@ section { padding: 100px 40px; max-width: 1180px; margin: 0 auto; }
 #hero { padding: 100px 40px 40px; position: relative; }
 #projects { padding-top: 40px; padding-bottom: 100px; }
 #quote { background: var(--color-surface); padding: 100px 40px; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); max-width: none; }
-#quote .quote-inner { max-width: 900px; margin: 0 auto; position: relative; }
+#quote .quote-inner { max-width: 1100px; margin: 0 auto; position: relative; }
+#quote .quote-inner p { max-width: 900px; }
 #contact { background: var(--color-surface); padding: 100px 40px 60px; max-width: none; }
-#contact .contact-inner { max-width: 1180px; margin: 0 auto; }
+#contact .contact-inner { max-width: 1100px; margin: 0 auto; }
 
 .section-kicker { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
 .section-kicker span { font-family: var(--font-heading); font-size: 14px; color: var(--color-accent-700); }
@@ -192,7 +193,9 @@ section { padding: 100px 40px; max-width: 1180px; margin: 0 auto; }
 .ar-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .ar-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .ar-exp-row { display: grid; grid-template-columns: 220px 1fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--color-divider); }
-.justify { text-align: justify; }
+.justify { text-align: left; }
+#projects-grid > :first-child { grid-column: 1 / -1; }
+#projects-grid > a > .card { box-sizing: border-box; }
 
 .os-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--color-divider); text-decoration: none; color: inherit; }
 .os-row:hover { background: color-mix(in srgb, var(--color-accent-700) 4%, transparent); }
