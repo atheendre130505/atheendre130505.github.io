@@ -19,7 +19,6 @@
     <a href="#experience" data-nav="experience">Experience</a>
     <a href="#education" data-nav="education">Education</a>
     <a href="#skills" data-nav="skills">Skills</a>
-    <a href="#references" data-nav="references">References</a>
     <a href="#contact" data-nav="contact">Contact</a>
   </nav>
 </header>
@@ -88,15 +87,9 @@
   <div class="ar-grid-2" id="skills-grid"></div>
 </section>
 
-<section id="references" class="reveal">
-  <div class="section-kicker"><span>06</span><h2>References</h2></div>
-  <div class="hr" style="margin-bottom: 24px;"></div>
-  <div class="ar-grid-3" id="references-grid"></div>
-</section>
-
 <section id="contact" class="reveal">
   <div class="contact-inner">
-    <div class="section-kicker"><span>07</span><h2>Get in Touch</h2></div>
+    <div class="section-kicker"><span>06</span><h2>Get in Touch</h2></div>
     <div class="hr" style="margin-bottom: 32px;"></div>
     <p class="justify" style="font-size: 17px; max-width: 640px; margin-bottom: 32px;">Open to full-stack engineering roles, ML/RL research collaborations, and freelance projects. Reach out directly &mdash; I read everything myself.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
@@ -133,7 +126,7 @@
 
   var experience = [
     { role: 'ML Engineer / Architect Intern', org: 'Wipro · Client: Intel', dates: '24 Aug – 24 Nov 2026', location: 'Bangalore', desc: 'Sole engineer on a computer-vision project for Intel, working with a single manager and owning it end to end, from an open-ended problem to a working, rigorously evaluated system. There was no established playbook or reference implementation to follow: the task meant finding and understanding dense clusters of tiny, near-identical objects in extremely high-resolution imagery, where standard approaches break down. The hard parts were ruling out a long list of approaches before one held up, producing training labels at scale with a propose-and-verify pipeline that kept quality trustworthy, and designing an evaluation framework strong enough that the results could be relied on. Owned the architecture, experimentation and delivery. Client details are confidential; I am happy to discuss the approach at a high level.' },
-    { role: 'Research Intern', org: 'IIT Tirupati (Prof. P.C. Deshmukh)', dates: 'Jan 2024 – Present', location: 'Remote', desc: 'Researching scalable associative-memory models and memory-augmented Transformers (modern Hopfield networks) for long-context NLP — neural retrieval, summarization, and document search.' },
+    { role: 'Research Intern', org: 'IIT Tirupati / RV University', dates: 'Jan 2024 – Present', location: 'Remote', desc: 'Researching scalable associative-memory models and memory-augmented Transformers (modern Hopfield networks) for long-context NLP — neural retrieval, summarization, and document search.' },
     { role: 'Head of Operations (Volunteer Manager)', org: 'Robin Hood Army (NGO)', dates: 'Mar 2025 – Nov 2026', location: 'Bangalore', desc: "Managed a network of 10,000+ volunteers across Bangalore, overseeing city-wide operations and allocating volunteers and resources to partner schools according to each school's needs." },
     { role: 'Freelance Developer', org: 'Independent', dates: '2023 – Present', location: 'Bangalore', desc: 'Designed, built, and shipped production web applications for clients across the full stack.' }
   ];
@@ -143,12 +136,6 @@
     { name: 'Languages', items: ['Python', 'SQL', 'C / C++', 'JavaScript'] },
     { name: 'MERN Stack', items: ['MongoDB', 'Express.js', 'React', 'Node.js'] },
     { name: 'ML / AI', items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'PPO', 'DQN'] }
-  ];
-
-  var references = [
-    { name: 'Prof. P.C. Deshmukh', role: 'Professor, Physics, IIT Tirupati', contact: 'pcd@iittp.ac.in', href: 'mailto:pcd@iittp.ac.in', target: '_self' },
-    { name: 'Prof. P.G. Bhat', role: 'Adjunct Professor, RV University', contact: 'View recommendation letter (PDF)', href: 'assets/Recommendation-PG-Bhat.pdf', target: '_blank' },
-    { name: 'Deepak Koushik', role: 'Salesforce, Bengaluru', contact: 'linkedin.com/in/deepakkoushik', href: 'https://linkedin.com/in/deepakkoushik', target: '_blank' }
   ];
 
   function el(html) {
@@ -216,18 +203,6 @@
     skillsGrid.appendChild(wrap);
   });
 
-  var refsGrid = document.getElementById('references-grid');
-  references.forEach(function (r) {
-    refsGrid.appendChild(el(
-      '<div class="card" style="padding: 24px;">' +
-        '<span data-lucide="user" style="width: 21px; height: 21px; color: var(--color-accent-700); margin-bottom: 6px;"></span>' +
-        '<h4 style="margin: 4px 0 4px;">' + r.name + '</h4>' +
-        '<p style="margin: 0; font-size: 13px; color: color-mix(in srgb, var(--color-text) 82%, transparent);">' + r.role + '</p>' +
-        '<a href="' + r.href + '" target="' + r.target + '" rel="noopener" style="display: block; margin: 6px 0 0; font-size: 13px; color: var(--color-accent-700); text-decoration: none;">' + r.contact + '</a>' +
-      '</div>'
-    ));
-  });
-
   if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
 
   var progress = document.getElementById('scroll-progress');
@@ -247,7 +222,7 @@
   document.querySelectorAll('.reveal').forEach(function (elm) { revealObserver.observe(elm); });
 
   var navLinks = document.querySelectorAll('.ar-nav-links a');
-  var navSections = ['hero', 'projects', 'opensource', 'experience', 'education', 'skills', 'references', 'contact'];
+  var navSections = ['hero', 'projects', 'opensource', 'experience', 'education', 'skills', 'contact'];
   var navObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
