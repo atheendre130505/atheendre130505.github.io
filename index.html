@@ -32,8 +32,8 @@
       <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700);">Bangalore, India</span>
     </div>
     <h1 class="ar-hero-name">Atheendre Ramesh</h1>
-    <h6 style="color: var(--color-accent-800); font-size: 16px; letter-spacing: 0.04em; margin: 0 0 32px; text-transform: none; font-family: var(--font-body); font-weight: 600;">Full-Stack Developer &middot; ML / RL Engineer</h6>
-    <p class="justify" style="font-size: 18px; line-height: 1.7; max-width: 720px; margin: 0 0 40px;">Computer-science engineer who ships production-grade software and ML systems end to end &mdash; from a Spring Boot/React platform serving 500+ requests per minute to deep-reinforcement-learning agents and applied-ML projects. Contributes to large open-source codebases including Apache Kafka, scikit-learn, and Apache DataFusion, and researches memory-augmented Transformers at IIT Tirupati.</p>
+    <h6 style="color: var(--color-accent-800); font-size: 16px; letter-spacing: 0.04em; margin: 0 0 32px; text-transform: none; font-family: var(--font-body); font-weight: 600;">ML Engineer &middot; Computer Vision &middot; Full-Stack Developer</h6>
+    <p class="justify" style="font-size: 18px; line-height: 1.7; max-width: 720px; margin: 0 0 40px;">Computer-science engineer who ships production-grade software and ML systems end to end. Led a computer-vision project for Intel at Wipro, solving a problem with no established reference implementation, and built a Spring Boot/React platform serving 500+ requests per minute. Contributes to large open-source codebases including Apache Kafka, scikit-learn, and Apache DataFusion, and researches memory-augmented Transformers at IIT Tirupati.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;">
       <a href="assets/Atheendre_Ramesh_CV.pdf" download class="btn btn-primary"><span data-lucide="download" style="width: 15px; height: 15px;"></span> Download Resume</a>
       <a href="#projects" class="btn btn-secondary">View Projects</a>
@@ -50,7 +50,7 @@
 <section id="quote" class="reveal">
   <div class="quote-inner">
     <span data-lucide="quote" style="width: 32px; height: 32px; color: var(--color-accent-700); opacity: 0.6;"></span>
-    <p style="font-family: var(--font-heading); font-size: 32px; font-weight: 400; line-height: 1.45; margin: 20px 0 0; letter-spacing: -0.01em;">Merged pull requests into Apache Kafka, scikit-learn, and Apache DataFusion &mdash; and researching memory-augmented Transformers at IIT Tirupati.</p>
+    <p style="font-family: var(--font-heading); font-size: 32px; font-weight: 400; line-height: 1.45; margin: 20px 0 0; letter-spacing: -0.01em;">Led a computer-vision project for Intel at Wipro, merged pull requests into Apache Kafka, scikit-learn, and Apache DataFusion, and research memory-augmented Transformers at IIT Tirupati.</p>
   </div>
 </section>
 
@@ -116,6 +116,7 @@
 <script>
 (function () {
   var projects = [
+    { title: 'Large-Scale Vision System — Intel (via Wipro)', stack: 'Computer Vision · Deep Learning · Project Lead', desc: 'Led a first-of-its-kind computer-vision effort for Intel: dense, near-identical small objects in extremely high-resolution imagery, with no reference implementation to build on. Covered research, large-scale label generation, evaluation design and delivery. Confidential client work, so details are intentionally high level.', link: '#experience' },
     { title: 'StripeFlow — Payment Processing Platform', stack: 'Java · Spring Boot · React/TS · AWS', desc: 'End-to-end enterprise payments platform: serverless architecture handling 500+ API requests/min, a React/TypeScript front end, and full CI/CD & infrastructure-as-code.', link: 'https://github.com/atheendre130505/stripe-flow' },
     { title: 'PPO Dino Agent — Chrome Dino RL', stack: 'Python · PyTorch · PPO · Playwright', desc: 'Proximal Policy Optimization agent for the Chrome Dino game, successor to an earlier Dueling Double DQN agent. In active development toward live browser play via Playwright with real-time pixel input and a policy-visualization overlay.', link: 'https://github.com/atheendre130505/ppo-dinojump' },
     { title: 'VizDoom PPO Agent — Visual RL', stack: 'Python · PyTorch · PPO · ViZDoom', desc: 'Proximal Policy Optimization agent trained on a ViZDoom scenario, learning combat and navigation policies directly from raw pixel/visual input.', link: 'https://github.com/atheendre130505/vizdoom' },
@@ -131,12 +132,14 @@
   ];
 
   var experience = [
+    { role: 'ML Engineer / Architect Intern — Project Lead', org: 'Wipro · Client: Intel', dates: '24 Aug – 24 Nov 2026', location: 'Bangalore', desc: 'Led a computer-vision project for Intel, end to end, from an open-ended problem to a working, rigorously evaluated system. There was no established playbook or reference implementation to follow: the task meant finding and understanding dense clusters of tiny, near-identical objects in extremely high-resolution imagery, where standard approaches break down. The hard parts were ruling out a long list of approaches before one held up, producing training labels at scale with a propose-and-verify pipeline that kept quality trustworthy, and designing an evaluation framework strong enough that the results could be relied on. Owned the architecture, experimentation and delivery. Client details are confidential; I am happy to discuss the approach at a high level.' },
     { role: 'Research Intern', org: 'IIT Tirupati (Prof. P.C. Deshmukh)', dates: 'Jan 2024 – Present', location: 'Remote', desc: 'Researching scalable associative-memory models and memory-augmented Transformers (modern Hopfield networks) for long-context NLP — neural retrieval, summarization, and document search.' },
-    { role: 'Head of Volunteer Management', org: 'Robinhood Academy (NGO)', dates: '2023 – Present', location: 'Bangalore', desc: "Lead volunteer recruitment, coordination, and program delivery for the organization's education initiatives." },
+    { role: 'Head of Operations (Volunteer Manager)', org: 'Robin Hood Army (NGO)', dates: 'Mar 2023 – Present', location: 'Bangalore', desc: "Manage a network of 10,000+ volunteers across Bangalore, overseeing city-wide operations and allocating volunteers and resources to partner schools according to each school's needs." },
     { role: 'Freelance Developer', org: 'Independent', dates: '2023 – Present', location: 'Bangalore', desc: 'Designed, built, and shipped production web applications for clients across the full stack.' }
   ];
 
   var skillGroups = [
+    { name: 'Computer Vision', items: ['Object detection', 'Dense small-object scenes', 'Large-scale labelling', 'Evaluation design'] },
     { name: 'Languages', items: ['Python', 'SQL', 'C / C++', 'JavaScript'] },
     { name: 'MERN Stack', items: ['MongoDB', 'Express.js', 'React', 'Node.js'] },
     { name: 'ML / AI', items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'PPO', 'DQN'] }
@@ -157,7 +160,7 @@
   var projectsGrid = document.getElementById('projects-grid');
   projects.forEach(function (p) {
     projectsGrid.appendChild(el(
-      '<a href="' + p.link + '" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">' +
+      '<a href="' + p.link + '"' + (p.link.charAt(0) === '#' ? '' : ' target="_blank" rel="noopener"') + ' style="text-decoration: none; color: inherit;">' +
         '<div class="card elev-sm" style="padding: 28px; height: 100%;">' +
           '<span class="card-kicker">' + p.stack + '</span>' +
           '<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">' +
